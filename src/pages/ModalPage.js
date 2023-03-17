@@ -1,6 +1,6 @@
+import { useState } from "react";
 import Modal from "../components/Modal";
 import Button from "../components/Button";
-import { useState } from "react";
 
 function ModalPage() {
   const [showModal, setShowModal] = useState(false);
@@ -9,12 +9,16 @@ function ModalPage() {
     setShowModal(true);
   };
 
+  const handleClose = () => {
+    setShowModal(false);
+  };
+
   return (
     <div>
       <Button onClick={handleClick} primary>
         Open Modal
       </Button>
-      {showModal && <Modal />}
+      {showModal && <Modal onClose={handleClose} />}
     </div>
   );
 }
