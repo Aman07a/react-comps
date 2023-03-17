@@ -20,7 +20,6 @@ function ModalPage() {
       </Button>
     </div>
   );
-
   const modal = (
     <Modal onClose={handleClose} actionBar={actionBar}>
       <p>Here is an important agreement for you to accept</p>
